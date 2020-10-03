@@ -6,7 +6,7 @@
 	--main-decor-color: #00a9e2;
 	--main-header-background: #21252e;
 	--main-font-family: 'Poppins', sans-serif;
-	--main-background-image: url('https://images.photowall.com/products/51281/nashville-tennessee-skyline-black.jpg?q=75&w=150&h=150') no-repeat;
+	--main-background-image: url("/Images/dark-grey-terrazzo.png") no-repeat;
 }
 
 * {
@@ -253,8 +253,8 @@ h3 {
 
 #projects p {
 	font-family: var(--main-font-family);
-	font-size: 1.2rem;
-	padding: 10px;
+	font-size: 1rem;
+	padding: 15px;
 }
 
 .work {
@@ -266,23 +266,24 @@ h3 {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin: 80px;
-	/* width: 200px; */
-	height: 250px;
+	margin-top: 80px;
+	margin-bottom: 80px;
+	margin-right: 0px;
+	margin-left: 0px;
+	padding-bottom: 15px;
 	border-radius: 25%;
-	background: var(--main-decor-color);
+	height: fit-content;
 }
 
 h3.project-head {
 	font-size: 2.5rem;
 }
 
-/* .card img {
-	width: 75vw;
-	height: 100vh;
-	border-radius: 10px 10px 0px 0px;
-	
-} */
+.card img {
+	border-radius: 25%;
+	width: 25vw;
+	padding: 10px;
+}
 
 .card .work-content {
 	text-align: center;
@@ -435,7 +436,7 @@ hr {
 }
 
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
 
 	#home,
 	#projects,
@@ -485,12 +486,41 @@ hr {
 	.nav-bar li {
 		opacity: 2;
 	}
+
+
+.card img {
+	border-radius: 25%;
+	width: 50vw;
+	padding: 10px;
+}
+
+.card .work-content {
+	text-align: center;
+	font-size: 1rem;
+	color: var(--main-fonts-color);
+	font-family: var(--main-font-family);
+	cursor: pointer;
+	border-radius: 0px 0px 10px 10px;
+	background-color: var(--main-decor-color);
+	height: 100%;
+	width: 100%;
+}
+
+.card a {
+	text-decoration: none;
+}
+
+.card .work-content:hover {
+	color: #202020;
+}
+
+.card:hover {
+	box-shadow: 0 0 1.5rem #2196F3 ;
+}
+
+
 }
 
 .nav-active {
 	transform: translatex(0%);
-}
-
-h3.project-head{
-	padding:10px;
 }

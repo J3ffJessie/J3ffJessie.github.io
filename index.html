@@ -1,119 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
   <title>Jeff Jessie</title>
-  <link rel="icon" href="/Images/jeff-favicon.ico">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
-  <script type="text/javascript">
-    (function () {
-      emailjs.init("user_cdSPdmfn0SP8UEjvboxBy");
-    })();
-  </script>
-  <link rel="stylesheet" href="styles.css">
-
-
+  <link href="styles.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="index.js"></script>
 </head>
 
 <body>
-  <div>
-    <p><a href="#main_nav" id="access_nav" class="access_aid">Skip to Navigation</a></p>
-    <nav id="main_nav">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <p><a href="#body" id="access_top" class="access_aid">Skip to Top</a></p>
-    </nav>
+
+  <div class="container">
+
+    <header>
+      <a class="logo" href="#home">
+      </a>
+      <nav>
+        <ul class="nav-bar">
+          <div class="bg"></div>
+          <label class="switch">
+            <input type="checkbox">
+          </label>
+          <li><a class="nav-link active" href="#home">Home</a></li>
+          <li><a class="nav-link" href="#projects">Projects</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    </header>
+    <main>
+
+      <div id="home">
+        <div class="filter"></div>
+        <section class="intro">
+          <h3>Jeff Jessie
+            <hr>
+          </h3>
+          <p>Front End JavaScript Developer</p>
+          <p>VetsWhoCode Product Team Member</p>
+          <p>Always learning, trying new things and implementing the latest technologies to create accessible, fast and fun web applications that make others happy. I hope to help others create accessible and fun applications as well as help create an inclusive environment for everyone.
+          </p>
+
+
+
+          <div class="social-media">
+            <a href="https://codesandbox.io/dashboard/home?workspace=7ad971b0-299b-4391-8a18-8438d5bf2c02"
+              target="_blank"><i class='fab fa-codepen'></i></a>
+            <a href="https://twitter.com/J3ffJessie" target="_blank"><i class='fab fa-twitter'></i></a>
+            <a href="https://github.com/J3ffJessie" target="_blank"><i class='fab fa-github'></i></a>
+            <a href="https://www.linkedin.com/in/jeff-jessie-4b2323a9/" target="_blank"><i
+                class='fab fa-linkedin-in'></i></a>
+          </div>
+
+        </section>
+      </div>
+
+
+      <div id="projects">
+        <h3>My Projects.
+          <hr>
+        </h3>
+        <p>Here are some of my projects, you may like.</p>
+        <div class="work-box">
+          <div class="work">
+            <div class="card">
+              <!-- <img class="work-img" src="./Images/BattleBuddy.png" height="200px" width="200px"> -->
+              <a href="http://battlebuddylanding.surge.sh/" target="_blank">
+              <h3 class="project-head">BattleBuddy.IO</h3>
+              </a>
+              <p>Veteran Made, Veteran Mental Health assistance, using community engagement.
+              </p>
+                <!--Link to project-->
+            </div>
+            <div class="card">
+              <!-- <img class="work-img" src="./Images/BattleBuddy.png" height="200px" width="200px"> -->
+              <a href="http://battlebuddylanding.surge.sh/" target="_blank">
+              <h3 class="project-head">BattleBuddy.IO</h3>
+              </a>
+              <p>Veteran Made, Veteran Mental Health assistance, using community engagement.
+              </p>
+                <!--Link to project-->
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="contact">
+
+        <h3>Contact.
+          <hr>
+        </h3>
+        <p>Feel free to contact me on my social media or by using the contact form below.</p>
+        <div class="social-media">
+          <a href="https://twitter.com/J3ffJessie" target="_blank"><i class='fab fa-twitter'></i></a>
+          <a href="https://github.com/J3ffJessie" target="_blank"><i class='fab fa-github'></i></a>
+          <a href="https://www.linkedin.com/in/jeff-jessie-4b2323a9/" target="_blank"><i
+              class='fab fa-linkedin-in'></i></a>
+        </div>
+      </div>
+
+    </main>
+    <footer class="copyright">
+      <a href="#" target="_blank">Made By Jeff Jessie</a>
+    </footer>
+
+
   </div>
-
-
-  <div class="top-container">
-    <span class="hero-container" id="slide-in">
-    <h1>Jeff Jessie</h1>
-    <img src="/Images/jeff profile.png" alt="Cartoon Profile Image" class="home-image">
-    <h1><span class="txt-rotate" data-period="2000" data-rotate='[ "Veteran", "Diligent", "Web Developer" ]'></span>
-    </h1>
-    </span>
-  </div>
-  <div id="about" class="about-container">
-    <p>Hello, I am Jeff Jessie a Front End Developer and overall web junkie. I love taking ideas and formulating
-      the best approach to making that idea appear on all screens. I have experience with HTML,CSS,JavaScript as well
-      as React.
-      I also have experience with Express and NodeJS for backend server side and Database experience using GraphQL,
-      MongoDB and MySQL.</p>
-    <p>I am looking to join a company as a Front End Developer where I can work with great people to make beautiful
-      websites and web applications through hard work, team work and dedication. My ideal
-      company is one that prides itself on being honest, inclusive, energetic and dedicated to making great things.
-    </p>
-  </div>
-
-
-  <div id="projects">
-  
-  <iframe-border width="500" height="475">
-    <iframe src="http://BattleBuddyLanding.surge.sh" scrolling= "no" style= "width: 375px; height: 460px"></iframe>
-</iframe-border>
-
-  </div>
-  <!-- Contact area components -->
-  <div class="contact-area">
-    <h1 id="contact" class="contact-heading">CONTACT ME</h1>
-    <form id="contact-form">
-      <input type="hidden" name="contact_number">
-      <br>
-      <label>Name</label>
-      <br>
-      <input type="text" name="user_name" required>
-      <br>
-      <label>Email</label>
-      <br>
-      <input type="email" name="user_email" required>
-      <br>
-      <label>Message</label>
-      <br>
-      <textarea name="message" rows="4" cols="15" required></textarea>
-      <br>
-      <button type="submit" value="Send">Send Email</button>
-    </form>
-  </div>
-
-  <div class="social-links" id="sliding">
-    <a href="https://www.linkedin.com/in/jeff-jessie-4b2323a9/" target="_blank"><i
-        class="fab fa-linkedin fa-w-14 fa-3x"></i></a>
-    <a href="https://twitter.com/J3ffJessie" target="_blank"><i class="fab fa-twitter-square fa-w-14 fa-3x"></i></a>
-    <a href="https://dev.to/j3ffjessie" target="_blank"><i class="fab fa-dev fa-w-14 fa-3x"></i></a>
-    <a href="https://fosstodon.org/web/accounts/189500" target="_blank"><i class="fab fa-mastodon"></i></a>
-  </div>
-
 </body>
-<script src="index.js"></script>
-<footer class="footer mt-auto py-3">
-  <div class="footer-container">
-    <div>Created by Jeff Jessie with 💻 &copy <script type="text/javascript">
-        document.write(new Date().getFullYear());
-      </script>
-    </div>
-    <script type="text/javascript">
-      window.addEventListener('load', function () {
-        document.getElementById('contact-form').addEventListener('submit', function (event) {
-          event.preventDefault();
-          // generate the contact number value
-          this.contact_number.value = Math.random() * 100000 | 0;
-          emailjs.sendForm('contact_service', 'contact_form', this);
-          alert("Thank you for your Message! I will respond as quickly as possible.")
-          document.getElementById("contact-form").reset();
-        })
-      });
-    </script>
-  </div>
-</footer>
 
 </html>

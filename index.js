@@ -1,79 +1,30 @@
-//Navigation alternate hidden versus showing elements
-const nav = document.getElementById('access_nav'),
-  body = document.body;
-
-nav.addEventListener('click', function (e) {
-  body.className = body.className ? '' : 'with_nav';
-  e.preventDefault();
-});
-
-
-// Typed Heading
-const TxtRotate = function (element, toRotate, period) {
-  this.toRotate = toRotate;
-  this.element = element;
-  this.loopNum = 0;
-  this.period = parseInt(period, 10) || 2000;
-  this.txt = '';
-  this.tick();
-  this.isDeleting = false;
-};
-
-TxtRotate.prototype.tick = function () {
-  let integer = this.loopNum % this.toRotate.length;
-  let fullTxt = this.toRotate[integer];
-
-  if (this.isDeleting) {
-    this.txt = fullTxt.substring(0, this.txt.length - 1);
+$(window).on('scroll', function() {
+  if($(window).scrollTop()){
+    $('header').addClass('nav-show');
   } else {
-    this.txt = fullTxt.substring(0, this.txt.length + 1);
+    $('header').removeClass('nav-show');
   }
+})
 
-  this.element.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+const navSlide = () => {
+  const hamburger = document.querySelector(".hamburger");
+  const navbar = document.querySelector(".nav-bar");
+  const navLinks = document.querySelector(".nav-bar li");
 
-  let that = this;
-  let delta = 300 - Math.random() * 100;
+  hamburger.onclick = () => {
+    navbar.classList.toggle("nav-active");
 
-  if (this.isDeleting) {
-    delta /= 2;
+    navLinks.forEach((link, index) => {
+      if(link.style.animation) {
+        link.style.animation = "";
+      } else {
+        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7+1}s`;
+      }
+    });
+    hamburger.classList.toggle("toggle");
+
   }
-
-  if (!this.isDeleting && this.txt === fullTxt) {
-    delta = this.period;
-    this.isDeleting = true;
-  } else if (this.isDeleting && this.txt === '') {
-    this.isDeleting = false;
-    this.loopNum++;
-    delta = 500;
-  }
-
-  setTimeout(function () {
-    that.tick();
-  }, delta);
-};
-
-window.onload = function () {
-  let elements = document.getElementsByClassName('txt-rotate');
-  for (var i = 0; i < elements.length; i++) {
-    let toRotate = elements[i].getAttribute('data-rotate');
-    let period = elements[i].getAttribute('data-period');
-    if (toRotate) {
-      new TxtRotate(elements[i], JSON.parse(toRotate), period);
-    }
-  }
-  // INJECT CSS
-  let css = document.createElement("style");
-  css.type = "text/css";
-  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
-  document.body.appendChild(css);
-};
-
-//style iframe for projects //
-
-function setIframeBorderJquery(){
-	$('iframe-border').each(function(){
-		$(this).css({'overflow': 'hidden', 'display': 'inline-block', 'width': $(this).attr('width'), 'height': $(this).attr('height')});
-		$('iframe', this).css({'position': 'relative', 'margin': '0', 'width': '100%', 'height': '100%'});
-	});
 }
-setInterval(setIframeBorderJquery, 10);
+
+
+window.onload = () => navSlide();

@@ -30,11 +30,11 @@ const navSlide = () => {
 let theme = true;
 
 
-function changeTheme(){
+function changeTheme() {
   console.log(theme);
   theme = !theme
   console.log(theme);
-  theme ? darkTheme(): lightTheme()
+  theme ? darkTheme() : lightTheme()
 }
 
 

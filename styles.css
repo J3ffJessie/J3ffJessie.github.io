@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 :root {
-	--main-background: #0b0c0f;
+	--main-background: #033349;
 	--main-fonts-color: #fff;
-	--main-decor-color: #00a9e2;
-	--main-header-background: #21252e;
+	--main-decor-color: #fe8138;
+	--main-header-background: #8f532f;
 	--main-font-family: 'Poppins', sans-serif;
 	--main-background-image: url("/Images/dark-grey-terrazzo.png") no-repeat;
 }
+
+
 
 * {
 	margin: 0;
@@ -36,6 +38,10 @@ header {
 	top: 0;
 	transition: 0.3s;
 	z-index: 5;
+}
+
+.namebar {
+	padding-top: 75px;
 }
 
 .brand {
@@ -107,7 +113,7 @@ https://images.photowall.com/products/56607/nashville-tennessee-skyline-2.jpg?q=
 
 
 #home .filter {
-	background: var(--main-background-image);
+	background: linear-gradient(var(--main-header-background), var(--main-background));
 	background-size: cover;
 	background-position: center;
 	position: absolute;
@@ -168,8 +174,8 @@ h3 {
 	color: var(--main-decor-color);
 }
 
-
 #projects {
+	background: linear-gradient(var(--main-background), var(--main-header-background));
 	margin-top: 100px;
 	height: 100%;
 	display: flex;
@@ -239,21 +245,38 @@ h3.project-head {
 }
 
 .card:hover {
-	box-shadow: 0 0 1.5rem #2196F3;
+	box-shadow: 0 0 1.5rem #e6250a;
 }
 
 
 
 #contact {
+	background: linear-gradient(var(--main-header-background), var(--main-background));
 	margin: auto;
 	padding-bottom: 20px;
-	height: 600px;
+	height: 500px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	color: var(--main-fonts-color);
 }
+
+
+#contact-form {
+    letter-spacing: 2px;
+  }
+
+input {
+	width: 250px;
+	height: 25px;
+}
+
+textarea {
+	width: 250px;
+}
+
+
 
 #contact p {
 	padding: 10px;
@@ -302,7 +325,7 @@ hr {
 }
 
 ::-webkit-Scrollbar {
-	width: 5px;
+	width: 0px;
 	background: rgba(5, 5, 5, 1);
 }
 
@@ -369,7 +392,7 @@ hr {
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
 
 	#home,
 	#projects,
@@ -457,6 +480,97 @@ hr {
 
 }
 
+@media only screen and (max-width: 375px) {
+	#home,
+	#projects,
+	#contact {
+		overflow-x: hidden;
+	}
+
+	header {
+		background-color: var(--main-header-background);
+	}
+	
+	.namebar{
+	padding-top: 500px;
+	}
+	.logo {
+		position: absolute;
+		top: 2px;
+		left: 30px;
+	}
+
+	.nav-show {
+		opacity: 1;
+	}
+
+	.nav-bar {
+		position: fixed;
+		top: 0px;
+		right: 0;
+		width: 60%;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+		background: var(--main-header-background);
+		transform: translatex(100%);
+		transition: transform 0.5s ease-in;
+		z-index: -1;
+	}
+
+	.hamburger {
+		position: inherit;
+		top: 17px;
+		right: 25%;
+		display: block;
+		cursor: pointer;
+		z-index: 5;
+	}
+
+	.nav-bar li {
+		opacity: 2;
+	}
+
+
+	.card img {
+		border-radius: 25%;
+		width: 50vw;
+		padding: 10px;
+	}
+
+	.card .work-content {
+		text-align: center;
+		font-size: 1rem;
+		color: var(--main-fonts-color);
+		font-family: var(--main-font-family);
+		cursor: pointer;
+		border-radius: 0px 0px 10px 10px;
+		background-color: var(--main-decor-color);
+		height: 100%;
+		width: 100%;
+	}
+
+	.card a {
+		text-decoration: none;
+	}
+
+	.card .work-content:hover {
+		color: #202020;
+	}
+
+	.card:hover {
+		box-shadow: 0 0 1.5rem #2196F3;
+	}
+
+
+}
+
+.nav-active {
+	transform: translatex(0%);
+}
+}
 .nav-active {
 	transform: translatex(0%);
 }

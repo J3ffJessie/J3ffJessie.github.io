@@ -8,6 +8,12 @@
   <link href="styles.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("user_cdSPdmfn0SP8UEjvboxBy");
+    })();
+  </script>
   <script src="index.js"></script>
 </head>
 
@@ -45,7 +51,7 @@
           <p>Front End JavaScript Developer</p>
           <p>VetsWhoCode Product Team Member</p>
           <p>Always learning, trying new things and implementing the latest technologies to create accessible, fast and
-            fun web applications that make others happy. I hope to help others create accessible and fun applications as
+            fun web applications that others enjoy. I hope to help others create accessible and fun applications, as
             well as help create an inclusive environment for everyone.
           </p>
 
@@ -93,11 +99,24 @@
 
 
       <div id="contact">
-
-        <h3>Contact.
-          <hr>
-        </h3>
-        <p>Feel free to contact me on my social media or by using the contact form below.</p>
+        <h3 class="contact-heading">CONTACT ME</h3>
+        <form id="contact-form">
+          <input type="hidden" name="contact_number">
+          <br>
+          <label>Name</label>
+          <br>
+          <input type="text" name="user_name" required>
+          <br>
+          <label>Email</label>
+          <br>
+          <input type="email" name="user_email" required>
+          <br>
+          <label>Message</label>
+          <br>
+          <textarea name="message" rows="8" required></textarea>
+          <br>
+          <input type="submit" value="Send">
+        </form>
         <div class="social-media">
           <a href="https://twitter.com/J3ffJessie" target="_blank"><i class='fab fa-twitter'></i></a>
           <a href="https://github.com/J3ffJessie" target="_blank"><i class='fab fa-github'></i></a>
@@ -109,6 +128,18 @@
     </main>
     <footer class="copyright">
       <a href="#" target="_blank">Made By Jeff Jessie</a>
+      <script type="text/javascript">
+        window.addEventListener('load', function () {
+          document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            // generate the contact number value
+            this.contact_number.value = Math.random() * 100000 | 0;
+            emailjs.sendForm('contact_service', 'contact_form', this);
+            alert("Thank you for your Message! I will respond as quickly as possible.")
+            document.getElementById("contact-form").reset();
+          })
+        });
+      </script>
     </footer>
 
 

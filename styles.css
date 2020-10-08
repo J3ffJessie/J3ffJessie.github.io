@@ -98,7 +98,8 @@ a.nav-link {
 
 #home {
 	margin: auto;
-	height: 100vh;
+	height: 100%;
+		background: linear-gradient(var(--main-header-background), var(--main-background));
 	color: var(--main-fonts-color);
 	display: flex;
 	flex-direction: column;
@@ -113,7 +114,6 @@ https://images.photowall.com/products/56607/nashville-tennessee-skyline-2.jpg?q=
 
 
 #home .filter {
-	background: linear-gradient(var(--main-header-background), var(--main-background));
 	background-size: cover;
 	background-position: center;
 	position: absolute;
@@ -142,7 +142,6 @@ https://images.photowall.com/products/56607/nashville-tennessee-skyline-2.jpg?q=
 
 h3 {
 	padding-bottom: 5px;
-	margin-top: 75px;
 	letter-spacing: normal;
 	font-family: var(--main-font-family);
 	font-style: normal;
@@ -188,7 +187,9 @@ h3 {
 	align-content: center;
 }
 
-
+h3.project-head {
+	font-size: 2.5rem;
+}
 
 #projects p {
 	font-family: var(--main-font-family);
@@ -214,9 +215,7 @@ h3 {
 	height: fit-content;
 }
 
-h3.project-head {
-	font-size: 2.5rem;
-}
+
 
 .card img {
 	border-radius: 25%;

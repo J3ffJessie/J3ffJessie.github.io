@@ -31,10 +31,9 @@ let theme = true;
 
 
 function changeTheme() {
-  console.log(theme);
   theme = !theme
   console.log(theme);
-  theme ? darkTheme() : lightTheme()
+  theme ? lightTheme() : darkTheme()
 }
 
 
@@ -77,3 +76,4 @@ function darkTheme() {
 
 
 window.onload = () => navSlide();
+changeTheme();

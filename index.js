@@ -67,7 +67,6 @@ function darkTheme() {
   document.documentElement.style.setProperty('--main-fonts-color', '#fff');
   document.documentElement.style.setProperty('--main-decor-color', '#38a1fe');
   document.documentElement.style.setProperty('--main-header-background', '#2f5f8f');
-  document.getElementsByClassName('project-head').style.hover.box-shadow('0 0 1.5rem #38a1fe');
 
 };
 

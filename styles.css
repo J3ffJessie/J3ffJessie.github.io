@@ -52,6 +52,10 @@ header {
 }
 
 
+.switch {
+	margin-right: 55px;
+}
+
 
 .nav-show {
 	opacity: 0;
@@ -402,7 +406,11 @@ hr {
 	header {
 		background-color: var(--main-header-background);
 	}
-	
+	.switch {
+		margin-right: 0px;
+		margin-top: 25px;
+		}
+
 	.namebar{
 	padding-top: 100px;
 	}

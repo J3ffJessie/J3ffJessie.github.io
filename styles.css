@@ -42,6 +42,11 @@ header {
 
 button {
 	margin-right:15px;
+	font-size: 30px;
+	height: 40px;
+	width: 40px;
+	background: transparent;
+	border: none;
 }
 .namebar {
 	padding-top: 75px;

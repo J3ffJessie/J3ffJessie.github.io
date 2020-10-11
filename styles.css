@@ -40,6 +40,9 @@ header {
 	z-index: 5;
 }
 
+button {
+	margin-right:15px;
+}
 .namebar {
 	padding-top: 75px;
 }
@@ -244,7 +247,7 @@ h3.project-head {
 }
 
 .card:hover {
-	box-shadow: 0 0 1.5rem #e6250a;
+	box-shadow: 0 0 1.5rem #2f5f8f;
 }
 
 
@@ -403,6 +406,9 @@ hr {
 		background-color: var(--main-header-background);
 	}
 	
+	button {
+		margin: 0px;
+	}
 	.namebar{
 	padding-top: 100px;
 	}
@@ -560,7 +566,7 @@ hr {
 	}
 
 	.card:hover {
-		box-shadow: 0 0 1.5rem #2196F3;
+		box-shadow: 0 0 1.5rem #2f5f8f;
 	}
 
 

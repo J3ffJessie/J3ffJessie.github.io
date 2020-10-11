@@ -40,6 +40,14 @@ header {
 	z-index: 5;
 }
 
+button {
+	margin-right:15px;
+	font-size: 30px;
+	height: 40px;
+	width: 40px;
+	background: transparent;
+	border: none;
+}
 .namebar {
 	padding-top: 75px;
 }
@@ -98,7 +106,8 @@ a.nav-link {
 
 #home {
 	margin: auto;
-	height: 100vh;
+	height: 100%;
+		background: linear-gradient(var(--main-header-background), var(--main-background));
 	color: var(--main-fonts-color);
 	display: flex;
 	flex-direction: column;
@@ -113,7 +122,6 @@ https://images.photowall.com/products/56607/nashville-tennessee-skyline-2.jpg?q=
 
 
 #home .filter {
-	background: linear-gradient(var(--main-header-background), var(--main-background));
 	background-size: cover;
 	background-position: center;
 	position: absolute;
@@ -142,7 +150,6 @@ https://images.photowall.com/products/56607/nashville-tennessee-skyline-2.jpg?q=
 
 h3 {
 	padding-bottom: 5px;
-	margin-top: 75px;
 	letter-spacing: normal;
 	font-family: var(--main-font-family);
 	font-style: normal;
@@ -188,7 +195,9 @@ h3 {
 	align-content: center;
 }
 
-
+h3.project-head {
+	font-size: 2.5rem;
+}
 
 #projects p {
 	font-family: var(--main-font-family);
@@ -214,9 +223,7 @@ h3 {
 	height: fit-content;
 }
 
-h3.project-head {
-	font-size: 2.5rem;
-}
+
 
 .card img {
 	border-radius: 25%;
@@ -245,10 +252,10 @@ h3.project-head {
 }
 
 .card:hover {
-	box-shadow: 0 0 1.5rem #e6250a;
+	box-shadow: 0 0 1.5rem #2f5f8f;
 }
 
-
+ 
 
 #contact {
 	background: linear-gradient(var(--main-header-background), var(--main-background));
@@ -404,6 +411,9 @@ hr {
 		background-color: var(--main-header-background);
 	}
 	
+	button {
+		margin: 0px;
+	}
 	.namebar{
 	padding-top: 100px;
 	}
@@ -561,7 +571,7 @@ hr {
 	}
 
 	.card:hover {
-		box-shadow: 0 0 1.5rem #2196F3;
+		box-shadow: 0 0 1.5rem #2f5f8f;
 	}
 
 

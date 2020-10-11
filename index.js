@@ -31,10 +31,9 @@ let theme = true;
 
 
 function changeTheme() {
-  console.log(theme);
   theme = !theme
   console.log(theme);
-  theme ? darkTheme() : lightTheme()
+  theme ? lightTheme() : darkTheme()
 }
 
 
@@ -54,6 +53,7 @@ function lightTheme() {
   document.documentElement.style.setProperty('--main-fonts-color', '#fff');
   document.documentElement.style.setProperty('--main-decor-color', '#fe8138');
   document.documentElement.style.setProperty('--main-header-background', '#8f532f');
+  document.getElementById('themed').innerHTML= '&#127773';
 };
 
 /* 
@@ -68,8 +68,7 @@ function darkTheme() {
   document.documentElement.style.setProperty('--main-fonts-color', '#fff');
   document.documentElement.style.setProperty('--main-decor-color', '#38a1fe');
   document.documentElement.style.setProperty('--main-header-background', '#2f5f8f');
-  document.getElementsByClassName('project-head').style.hover.box-shadow('0 0 1.5rem #38a1fe');
-
+  document.getElementById('themed').innerHTML = '&#127770';
 };
 
 
@@ -77,3 +76,4 @@ function darkTheme() {
 
 
 window.onload = () => navSlide();
+changeTheme();

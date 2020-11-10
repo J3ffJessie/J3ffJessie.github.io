@@ -115,11 +115,6 @@ a.nav-link {
 	justify-content: space-evenly;
 }
 
-/* For Regular Light Mode use this background 
-https://images.photowall.com/products/56607/nashville-tennessee-skyline-2.jpg?q=75&w=150&h=150 */
-
-
-
 
 #home .filter {
 	background-size: cover;
@@ -194,6 +189,7 @@ h3 {
 	overflow-y: hidden;
 	align-content: center;
 }
+
 
 h3.project-head {
 	font-size: 2.5rem;
